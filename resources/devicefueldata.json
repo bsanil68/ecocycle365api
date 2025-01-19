@@ -1,0 +1,76 @@
+[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "string",
+				"name": "deviceID",
+				"type": "string"
+			},
+			{
+				"indexed": true,
+				"internalType": "string",
+				"name": "fuelDataHash",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "FuelDataSaved",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "deviceID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "fuelDataHash",
+				"type": "string"
+			}
+		],
+		"name": "saveFuelData",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "deviceID",
+				"type": "string"
+			}
+		],
+		"name": "getFuelData",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "fuelDataHash",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct DeviceFuelData.FuelData[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
